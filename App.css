@@ -1,0 +1,139 @@
+#tit{
+  background-color: whitesmoke;
+  width: 655px;
+  padding: 17px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-left: 200px;
+}
+
+#tit1{
+  background-color: whitesmoke;
+  width: 550px;
+  padding: 10px;
+  border-radius: 5px;
+  border: hidden;
+}
+
+.date{
+  display: inline-block;
+  margin: 0;
+}
+
+#d{
+  margin-right: 320px;
+}
+
+#d1{
+  margin-right: 420px;
+}
+
+#font{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  /* border:1px solid #6bbbf0 */
+  border-color: rgb(215, 235, 241);
+}
+
+#date_bord{
+  background-color: white;
+  width: 650px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(233, 227, 227);
+  margin-bottom: 5px;
+  margin-left: 200px;
+}
+
+#dep{
+  background-color: white;
+  width: 650px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(233, 227, 227);
+  margin-bottom: 5px;
+  margin-left: 200px;
+}
+
+#h3{
+  margin-left: 200px;
+}
+
+.box:hover {
+  border:1px solid #b217b4;
+}
+
+.btns{
+  margin: 5px;
+}
+
+
+#five{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(215, 235, 241);
+}
+
+#five:hover {
+  background-color: green;
+}
+
+#four{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(215, 235, 241);
+}
+
+#four:hover {
+  background-color: rgb(234, 236, 67);
+}
+
+#thr{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(215, 235, 241);
+}
+
+#thr:hover {
+  background-color: rgb(221, 146, 85);
+}
+
+#two{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(215, 235, 241);
+}
+
+#two:hover {
+  background-color: rgb(129, 100, 175);
+}
+
+#one{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  border-color: rgb(215, 235, 241);
+}
+
+#one:hover {
+  background-color: rgb(223, 72, 72);
+}
+
+#ds{
+  margin-right: 230px;
+}
+
+#ds1{
+  margin-right: 120px;
+}
