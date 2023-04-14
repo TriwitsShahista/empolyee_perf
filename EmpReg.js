@@ -3,6 +3,52 @@ import axios from "axios";
 
 const EmpReg = () => {
 
+const [data, setData] = useState([]);
+
+var config = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'accept': '*/*',
+    },
+  };
+
+  const [employeeLogin, setEmployeeLogin] = useState({
+    department: "",
+    });
+
+  const resetEmployeeDetails = () => {
+    let _resetEmployee = {
+        department: "",
+    };
+    setEmployeeLogin(_resetEmployee);
+  };
+
+  const handleChangeInput = (e) => {
+    let key = e.target.name;
+    let value = e.target.value;
+    const _currentData = { ...employeeLogin, [key]: value };
+    setEmployeeLogin(_currentData);
+    axios
+            .post(`http://192.168.0.115/apis/api/EmpReg/fetchEmp`, _currentData,config)
+            .then((res) => {
+               console.log('response',res.data)
+               setData(res.data)
+               if (res.data != "Failed") {
+                 localStorage.setItem(
+                  "user_info",
+                   JSON.stringify(res.data)
+                 );
+                
+               }
+               if (res.data == "Failed") {
+                alert("Invalid Credantials")
+               }
+               resetEmployeeDetails();
+            })
+   // console.log(_currentData);
+  };
+
+
 return(
 <section>  
 <ul>    
@@ -20,17 +66,30 @@ return(
 
 <div id='dep'>
 <p class="col-10 phone-col-12">Department</p>
-<input class="input textsingle item" type="text" id='tit1'/>
+<select type="text" name='department' value={employeeLogin.department} id='tit1' onChange={handleChangeInput}>
+<option value="" size={10}>Select</option><br />
+        <option value='Accounts'>Accounts</option>
+        <option value='Technical'>Technical</option>
+        <option value='Nontechnical'>Nontechnical</option>
+</select>
+{/* <input type="text" name="department" value={employeeLogin.department} onChange={handleChangeInput}/>
+<input type="submit" value="Login" onClick={login} />  */}
 </div>
 
 <div id='dep'>
 <p class="col-10 phone-col-12">Name of Employee</p>
-<input class="input textsingle item" type="text" id='tit1'/>
+<select name="name" id='tit1'>
+<option>Select</option>
+{data.map(data => (
+    <option value={data.department} key={data.id}>{data.name}</option>
+  ))
+  }
+</select>
 </div>
 
 <div id='dep'>
 <p class="col-10 phone-col-12">HR Manager / Supervisor</p>
-<input class="input textsingle item" type="text" id='tit1'/>
+<input class="input textsingle item" type="text" id='tit1' name="hr" value={employeeLogin.hr} onChange={handleChangeInput}/>
 </div>
 
 <h3 class="item category row" data-item-id="4df42f6a-5d9a-4161-93fc-02f57768527b" id='h3'>General Information</h3>
