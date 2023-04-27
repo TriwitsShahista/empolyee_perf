@@ -57,6 +57,26 @@
   margin-left: 200px;
 }
 
+#depForm{
+  background-color: white;
+  width: 570px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(233, 227, 227);
+  margin-left: 400px;
+  margin-top: 150px;
+}
+
+/* #depSel{
+  background-color: white;
+  width: 570px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(233, 227, 227);
+  margin-left: 400px;
+  margin-top: 150px;
+} */
+
 #h3{
   margin-left: 200px;
 }
@@ -136,4 +156,128 @@
 
 #ds1{
   margin-right: 120px;
+}
+
+.btnForm{
+  margin-top: 25px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: min-content;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.tab{
+ margin-left: -30px;
+}
+
+div.scrollmenu {
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+#depTable {
+  background-color: white;
+  width: 1160px;
+  padding-right: 40px;
+  border-radius: 10px;
+  border: 0.5px solid rgb(233, 227, 227);
+  margin-left: 230px;
+  margin-top: 100px;
+}
+
+#titTable{
+  background-color: whitesmoke;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  border: hidden;
+}
+
+.nameDsg{
+  margin-left: 40px;
+}
+
+#dateDsg{
+  margin-left: 230px;
+  margin-top: -87px;
+}
+
+#dateDsg1 {
+  margin-left: 430px;
+  margin-top: -87px;
+}
+
+#btnDsg{
+  margin-left: 630px;
+  margin-top: -65px;
+}
+
+.perfDsg {
+  margin-left: 770px;
+  margin-top: -87px;
 }
