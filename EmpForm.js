@@ -51,6 +51,7 @@ const validateOnChange = (name, value) => {
     name: "",
     email: "",
     department: "",
+    att: "",
   });
 
   const resetEmployeeDetails = () => {
@@ -58,6 +59,7 @@ const validateOnChange = (name, value) => {
         name: "",
         email: "",
         department: "",
+        att: "",
     };
     setEmployeeDetails(_resetEmployee);
   };
@@ -103,13 +105,13 @@ const validateOnChange = (name, value) => {
           Object.keys(_errors).length == 0
             ? axios
                .post(
-               "http://192.168.1.17/apis/api/EmpReg/postEmp" ,_requestData, config)
+               "http://192.168.1.9/apis/api/EmpReg/postEmp" ,_requestData, config)
                 .then((res) => {
                          console.log(res.data)
                          if (res.status === 200) {
                          alert("Successfully registred");
                          } setFormErrors({});
-                       //  console.log("/leadMngTable",{dataMng:res.data})
+                        //  navigate("/empReg")
                          })
                 .catch((err) =>{ alert("Something went wrong")
                 setFormErrors({});
@@ -141,8 +143,27 @@ return(
 <p style={{ marginTop: "1px", color: "red" }}>{formErrors.department}</p>
 </select>
 
-<div>
-<button type="submit" value="Submit" onClick={submitdata} className="template-preview-input add-button rhs-select col-2 phone-col-3, date, box" data-input="datetime" id='font'>
+{/* <div onChange={handleChangeInput}>
+<p class="col-10 phone-col-12">Attendance</p>
+
+  <input type="radio" class=" btns" name="att" value='5'   id="five" data-input="datetime" autocomplete="off"  />
+  <label class="phone-hide, date" for="5">5</label>
+
+  <input type="radio" class=" btns" name="att" value='4'   id="four" data-input="datetime" autocomplete="off" />
+  <label class="phone-hide, date" for="4">4</label>
+
+  <input type="radio" class=" btns" name="att" value='3'  id="thr" data-input="datetime" autocomplete="off" />
+  <label class="phone-hide, date" for="3">3</label>
+
+  <input type="radio" class=" btns" name="att" value='2'  id="two" data-input="datetime" autocomplete="off" />
+  <label class="phone-hide, date" for="2">2</label>
+
+  <input type="radio" class=" btns" name="att" value='1'  id="one" data-input="datetime" autocomplete="off" />
+  <label class="phone-hide, date" for="1">1</label>
+</div> */}
+
+<div onClick={navigate("/empReg")}>
+<button type="submit" value="Submit" onClick={submitdata} className="template-preview-input add-button rhs-select col-2 phone-col-3, date, btnForm" data-input="datetime" id='font'>
 <span className="phone-hide, date">Submit</span>
 </button>
 </div>
